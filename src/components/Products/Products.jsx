@@ -1,4 +1,5 @@
 import React from "react";
+import { FaStar } from "react-icons/fa";
 
 import Img1 from "../../assets/womens/hello.webp";
 import Img2 from "../../assets/womens/hellon.webp";
@@ -11,7 +12,7 @@ const ProductsData = [
     id: 1,
     img: Img1,
     title: "Women Ethnic",
-    rating: 5.0,
+    rating: 5.3,
     color: "white",
     aosDelay: "0",
   },
@@ -57,11 +58,11 @@ const Products = () => {
       <div className="container">
         {/* Header section */}
         <div className="text-center mb-10 max-w-[600px] mx-auto ">
-          <p className="text-sm text-orange-500">
+          <p  data-aos= "fade-up" className="text-sm text-orange-500">
             Top Selling Products for you
           </p>
-          <h1 className="text-3xl font-bold">Products</h1>
-          <p className="text-xs text-gray-400">
+          <h1 data-aos= "fade-up" className="text-3xl font-bold">Products</h1>
+          <p data-aos= "fade-up" className="text-xs text-gray-400">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque quae
             harum recusandae.
           </p>
@@ -77,7 +78,14 @@ const Products = () => {
           >
             {/* card sectio */}
             {ProductsData.map((data) => (
-              <div key={data.id}>
+              <div
+              data-aos="fade-up"
+              data-aos-delay={data.aosDelay}
+
+              
+              key={data.id}
+              className="space-y-3"
+              >
                 <img
                   src={data.img}
                   alt=""
