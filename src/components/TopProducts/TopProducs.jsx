@@ -33,7 +33,7 @@ const TopProducs = () => {
     <div>
       <div className="container">
         {/* Header section */}
-        <div className="text-left mb-10  ">
+        <div className="text-left mb-28  ">
           <p data-aos="fade-up" className="text-sm text-orange-500">
             Top Rated Products for you
           </p>
@@ -54,17 +54,47 @@ const TopProducs = () => {
         >
           {ProducsData.map((data) => (
             <div
+            key={data.id}
+            // data-aos="zoom-in"
               className=" rounded-2xl bg-white dark:bg-gray-800
             hover:bg-black/80 dark:hover:bg-orange-300
             hover:text-white relative shadow-xl 
-            duration-high group max-w-[300px]
+            duration-300 group max-w-[300px]
             "
             >
               {/* image section */}
-              <div>
-                <img src={data.img} />
+              <div className="h-[100px]">
+                <img src={data.img} 
+                
+                className="max-w-[140px] block mx-auto transform -translate-y-20 group-hover:scale-105 duration-300 drop-shadow-md"
+                />
               </div>
               {/* details section  */}
+              <div className="p-4 text-center ">
+                {/* star reting */}
+                <div className=" w-full flex items-center
+                justify-center gap-1
+                ">
+                  <FaStar className="text-yellow-500"/>
+                  <FaStar className="text-yellow-500"/>
+                  <FaStar className="text-yellow-500"/>
+                  <FaStar className="text-yellow-500"/>
+                </div>
+                 <h1
+                 className="text-xl font-bold"
+                 >{data.title}</h1>
+                 <p
+                 className="text-gray-500 group-hover:text-white durtion-300 *
+                 text-sm line-clamp-2
+                 "
+                 >{data.description}</p>
+                 <button
+                 className="bg-orange-400 hover:scale-105 duration-300 text-white py-1 px-4
+                 rounded-full mt-4 group-hover:bg-white
+                 "
+                //  onClick={handleOrderPopup}
+                 >Order Now</button>
+              </div>
             </div>
           ))}
         </div>
