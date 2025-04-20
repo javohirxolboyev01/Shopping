@@ -1,5 +1,5 @@
 import React from "react";
-import Img1 from "../../assets/shirts/Img1.jpg";
+import Img1 from "../../assets/shirts/shirs.png";
 import Img2 from "../../assets/shirts/Img2.jpg";
 import Img3 from "../../assets/shirts/Women.jpg";
 import { FaStar } from "react-icons/fa6";
@@ -89,8 +89,10 @@ const TopProducs = () => {
                  "
                  >{data.description}</p>
                  <button
-                 className="bg-orange-400 hover:scale-105 duration-300 text-white py-1 px-4
+                 className="bg-orange-400 hover:scale-105 duration-300 text-white  py-1 px-4
                  rounded-full mt-4 group-hover:bg-white
+                 group-hover:text-orange-500
+
                  "
                 //  onClick={handleOrderPopup}
                  >Order Now</button>

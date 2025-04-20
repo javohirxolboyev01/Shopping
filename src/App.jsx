@@ -6,6 +6,9 @@ import Products from "./components/Products/Products";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import TopProducs from "./components/TopProducts/TopProducs";
+import Banner from "./components/Banner/Banner";
+import Subscribe from "./components/Subscribe/Subscribe";
+import Testimonials from "./components/Testimonials/Testimonials";
 
 function App() {
   useEffect(() => {
@@ -24,6 +27,10 @@ function App() {
         <Hero />
         <Products />
         <TopProducs/>
+        <Banner/>
+        <Subscribe/>
+        <Products />
+        <Testimonials/>
       </div>
     </>
   );

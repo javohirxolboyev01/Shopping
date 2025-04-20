@@ -102,6 +102,13 @@ const Products = () => {
               </div>
             ))}
           </div>
+          {/* wiew all button */}
+          <div className="flex justify-center">
+            <button className="text-center mt-10 cursor-pointer bg-orange-400 text-white py-1 px-5 
+            rounded-md
+            ">Wiew All Button</button>
+            </div>
+
         </div>
       </div>
     </div>
