@@ -13,32 +13,13 @@ const TestimonialDta = [
     id: 2,
     name: "Serdar",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Blanditiis cum sed rerum adipisci labore nobis autem consequuntur inventore doloremque soluta!",
-    img: "https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fi2.wp.com%2Fpurepng.com%2Fpublic%2Fuploads%2Flarge%2Fpurepng.com-men-in-suitmanpeoplepersonsmalein-suitbusinessbusinesspersonsbusinessman-1121525097545bfvwi.png&lr=10335&p=1&pos=2&rpt=simage&text=mens%20portret%20png",
+    img: Victor,
   },
   {
     id: 3,
     name: "Nodirbek",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Blanditiis cum sed rerum adipisci labore nobis autem consequuntur inventore doloremque soluta!",
-    img: "https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fimages.narisyu.com%2Fposts%2F5724714-portret-podrostka-31.jpg&lr=10335&p=1&pos=14&rpt=simage&text=mens%20portret%20png",
-  },
-
-  {
-    id: 4,
-    name: "Abu Bakr",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Blanditiis cum sed rerum adipisci labore nobis autem consequuntur inventore doloremque soluta!",
-    img: "https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fimages.narisyu.com%2Fposts%2F5724714-portret-podrostka-31.jpg&lr=10335&p=1&pos=14&rpt=simage&text=mens%20portret%20png",
-  },
-  {
-    id: 5,
-    name: "Umar",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Blanditiis cum sed rerum adipisci labore nobis autem consequuntur inventore doloremque soluta!",
-    img: "https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F2d%2Fd6%2F11%2F2dd61143707f9209c68c8a10b8b4570a.jpg&lr=10335&p=2&pos=5&rpt=simage&text=mens%20portret%20png",
-  },
-  {
-    id: 6,
-    name: "Ali",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.Blanditiis cum sed rerum adipisci labore nobis autem consequuntur inventore doloremque soluta!",
-    img: "https://yandex.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fstatic.tildacdn.com%2Ftild3031-6162-4739-b630-363232323065%2Fimage_26.png&lr=10335&p=2&pos=17&rpt=simage&text=mens%20portret%20png",
+    img: Victor,
   },
 ];
 
@@ -48,11 +29,11 @@ const Testimonials = () => {
     arrows: false,
     infinite: true,
     speed: 500,
-    // slidersToShow:2
+    // slidersToShow:2,
     sliderToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: "Lineer",
+    cssEase: "linear",
     pouseOnHover: true,
     pouseOnFocus: true,
     responsive: [
@@ -99,18 +80,34 @@ const Testimonials = () => {
         </div>
         {/* Testimonial card */}
 
-        <div>
+        <div
+        data-aos="zoom-in"
+        >
           <Slider {...settings}>
             {TestimonialDta.map((data) => (
+              <div  className="my-6">
+
               <div
                 key={data.id}
                 className="flex flex-col gap-4
-               shadow-lg py-8 px-6 mx-4 rounded-xl "
-              >
-                <div>
-                  <img src={data.img} className="w-30 h-30" />
+                shadow-lg py-8 px-6 mx-4 rounded-xl  dark:gray-500 bg-orange-200 relative"
+                >
+                <div className="mb-4">
+                  <img src={data.img} className="rounded-full w-30 h-30" />
                 </div>
+                <div className=" flex flex-col items-center gap-4">
+                  <div className="space-y-3">
+                    <p className="text-xs text-gray-500">{data.text}</p>
+                    <h1 className="text-xl font-bold text-black/80 dark:text-light">
+                      {data.name}
+                    </h1>
+                  </div>
+                </div>
+                <p className="text-black/20 text-9xl font-serif absolute top-0 right-0">
+                ,,
+                </p>
               </div>
+                </div>
             ))}
           </Slider>
         </div>

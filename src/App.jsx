@@ -9,6 +9,7 @@ import TopProducs from "./components/TopProducts/TopProducs";
 import Banner from "./components/Banner/Banner";
 import Subscribe from "./components/Subscribe/Subscribe";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
         <Subscribe/>
         <Products />
         <Testimonials/>
+        <Footer/>
       </div>
     </>
   );
